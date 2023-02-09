@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.bottom_home_btn -> if (flag_home_frag) {}
                 else {
                     if (flag_movies_frag) {
-                        findNavController(R.id.fragmentContainerView).navigate(R.id.action_moviesFragment_to_homeFragment)
+                        findNavController(R.id.fragmentContainerView).navigate(R.id.action_Shows_to_homeFragment)
                         flag_movies_frag = false
                         flag_home_frag = true
                     }
@@ -38,12 +38,12 @@ class MainActivity : AppCompatActivity() {
                     else
                     {
                         if(flag_home_frag){
-                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_homeFragment_to_moviesFragment)
+                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_homeFragment_to_Shows)
                             flag_home_frag = false
                             flag_movies_frag = true
                         }
                         else if(flag_fave_frag){
-                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_favoritesFragment_to_moviesFragment)
+                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_favoritesFragment_to_Shows)
                             flag_fave_frag = false
                             flag_movies_frag = true
                         }
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
                             flag_fave_frag = true
                         }
                         else if(flag_movies_frag){
-                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_moviesFragment_to_favoritesFragment)
+                            findNavController(R.id.fragmentContainerView).navigate(R.id.action_Shows_to_favoritesFragment)
                             flag_movies_frag = false
                             flag_fave_frag = true
                         }

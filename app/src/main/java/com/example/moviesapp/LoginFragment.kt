@@ -45,7 +45,7 @@ class LoginFragment:Fragment() {
                     if (it.isSuccessful) {
 //                        val intent = Intent(this, MainActivity::class.java)
 //                        startActivity(intent)
-                        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                        findNavController().navigate(R.id.action_loginFragment_to_Shows)
 
                     } else {
                         makeText(requireActivity(), it.exception!!.message.toString(), LENGTH_SHORT).show()

@@ -4,19 +4,27 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".HomeFragment">
+    tools:context=".HomeFragment"
+    android:background="@drawable/tvshows">
 
     <TextView
         android:id="@+id/welcome_txt"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Welcome" />
-<Button
-    android:id="@+id/signup_btn"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Sign up"
-    app:layout_constraintTop_toBottomOf="@id/welcome_txt"/>
+        android:text="Welcome"
+        android:textSize="25dp"
+        android:textColor="@color/white"/>
+
+    <Button
+        android:layout_margin="15dp"
+        android:id="@+id/signup_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Sign up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcome_txt" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

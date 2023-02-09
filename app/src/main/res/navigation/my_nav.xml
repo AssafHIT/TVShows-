@@ -13,11 +13,11 @@
             android:id="@+id/action_homeFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_moviesFragment"
-            app:destination="@id/moviesFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_Shows"
+            app:destination="@id/Shows" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
@@ -39,18 +39,21 @@
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_Shows"
+            app:destination="@id/Shows" />
     </fragment>
     <fragment
-        android:id="@+id/moviesFragment"
-        android:name="com.example.moviesapp.MoviesFragment"
-        android:label="movies_layout"
-        tools:layout="@layout/movies_layout" >
+        android:id="@+id/Shows"
+        android:name="com.example.moviesapp.Shows"
+        android:label="shows"
+        tools:layout="@layout/shows">
         <action
-            android:id="@+id/action_moviesFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_moviesFragment_to_favoritesFragment"
+            android:id="@+id/action_Shows_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_Shows_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
@@ -58,10 +61,10 @@
         android:label="favorites_layout"
         tools:layout="@layout/favorites_layout" >
         <action
-            android:id="@+id/action_favoritesFragment_to_moviesFragment"
-            app:destination="@id/moviesFragment" />
-        <action
             android:id="@+id/action_favoritesFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_favoritesFragment_to_Shows"
+            app:destination="@id/Shows" />
     </fragment>
 </navigation>

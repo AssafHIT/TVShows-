@@ -49,8 +49,6 @@ class SignUpFragment:Fragment() {
             if (password == password2) {
                 firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        //val intent = Intent(this,LoginFragment::class.java)
-                        //startActivity(intent)
                         findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
                     } else {
                         Toast.makeText(requireActivity(), it.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
@@ -72,50 +70,3 @@ class SignUpFragment:Fragment() {
         super.onDestroyView()
         _binding = null
     }}
-
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        firebaseAuth = FirebaseAuth.getInstance()
-//
-//
-//        binding.signupButton.setOnClickListener {
-//            val email = binding.signupEmail.getText().toString()
-//            val password = binding.signupPassword.getText().toString()
-//            val password2= binding.signupPassword2.getText().toString()
-//        }
-//    }}
-//
-//
-//            if (email.isNotEmpty() && password.isNotEmpty() && password2.isNotEmpty()) {
-//
-//
-//                if (password == password2) {
-//                    firebaseAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {
-//                        if (it.isSuccessful) {
-//                            //val intent = Intent(this,LoginFragment::class.java)
-//                            //startActivity(intent)
-//                            findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
-//                        } else {
-//                            Toast.makeText(requireActivity(), it.exception!!.message.toString(), Toast.LENGTH_SHORT).show()
-//                        }
-//                    }
-//                }
-//                else {
-//                    Toast.makeText(requireActivity(),"Password is not matching", Toast.LENGTH_SHORT).show()
-//                }
-//            }
-//            else{
-//                Toast.makeText(requireActivity(),"Empty Fields Are not Allowed", Toast.LENGTH_SHORT).show()
-//            }
-//        }
-//
-//        binding.signupRedirectText.setOnClickListener()
-//        {
-//            val intent = Intent(this, LoginActivity::class.java)
-//            startActivity(intent)
-//        }
-//
-//    }
-//}
-//
-//
